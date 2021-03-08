@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Battle Buddies Home Healthcare</title>
+	<link rel="shortcut icon" href="Resources/Images/Battle-Buddies-1-e1594920626938.ico" type="image/x-icon">
+	<link rel="stylesheet" href="CSS/BBStyle.css">
+	<script src="Frameworks/JQuery.min.js"></script>
+</head>
+<body style="overflow-x:hidden;" onload="Startup()">
+
+<!-- Loader -->
+
+<div id="loader" style="background-color:#ffffff;width:100vw;height:150vh;position:absolute;top:0;left:0;z-index:5;overflow:hidden;">
+<div style="display:flex;height:100vh;align-items:center;justify-content:center;">
+<h2 style="margin-right:15px;margin-top:30px;">Loading...</h2>
+<span>↓</span>
+<span style="--delay: 0.1s">↓</span>
+<span style="--delay: 0.3s">↓</span>
+<span style="--delay: 0.4s">↓</span>
+<span style="--delay: 0.5s">↓</span>
+</div>
+</div>
+
+<!-- Nav Menu -->
+
+<div class="ribbon color bigscreen"></div>
+<div class="center">
+<button onclick="MainBtnClick(4)" id="servicesbtn" class="btn tooltip2"><span class="tooltiptext2">Services</span>
+<svg height='100px' width='100px'  fill="#000000" class="bigbimage" xmlns:x="http://ns.adobe.com/Extensibility/1.0/" xmlns:i="http://ns.adobe.com/AdobeIllustrator/10.0/" xmlns:graph="http://ns.adobe.com/Graphs/1.0/" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><g><g i:extraneous="self"><g><path d="M52.4,62.3c-1.8-0.9-4.6-2.6-7.5-4.6c-2.3,0.5-5.1,0-7.9-2.1c-0.7-0.5-1.4-1.1-2.1-1.8c-1.7-1.7-3.5-4-5.5-6.5     c-0.2-0.2-0.3-0.4-0.5-0.6c-0.5-0.6-0.4-1.6,0.2-2.1c0.7-0.6,1.7-0.5,2.3,0.2c0.2,0.2,0.3,0.4,0.5,0.6c2.6,3.2,5,6.3,7,7.7     c3.7,2.7,6.6,1.7,8.1-0.1c1.2-1.5,1.6-3.7-0.1-5.2c-2.4-2.2-4.7-5-7-7.8c-2.6-3.2-5.4-6.5-7.8-8.4c-1.4-1-4.2-2.3-7.2-3.6     c-0.7-0.3-2.1-0.9-2.1-0.9L17,21.6c-0.5-0.5-1.2-0.5-1.6,0L2.8,34.1c-0.5,0.5-0.5,1.2,0,1.6l5.6,5.6c2.8,5.9,6.4,12.9,9.3,16.3     c5.9,6.9,25.5,12.1,31.4,13.4C55.1,72.2,57.6,64.9,52.4,62.3z"></path><path d="M97.2,64.2l-5.6-5.6c-2.8-5.9-6.4-12.9-9.3-16.3C76.4,35.5,56.7,30.2,50.8,29c-5.9-1.2-8.5,6.1-3.2,8.7     c1.8,0.9,4.6,2.6,7.5,4.6c2.3-0.5,5.1,0,7.9,2.1c0.7,0.5,1.4,1.1,2.1,1.8c1.7,1.7,3.5,4,5.5,6.5c0.2,0.2,0.3,0.4,0.5,0.6     c0.5,0.6,0.4,1.6-0.2,2.1c-0.7,0.6-1.7,0.5-2.3-0.2c-0.2-0.2-0.3-0.4-0.5-0.6c-2.6-3.2-5-6.3-7-7.7c-3.7-2.7-6.6-1.7-8.1,0.1     c-1.2,1.5-1.6,3.7,0.1,5.2c2.4,2.2,4.7,5,7,7.8c2.6,3.2,5.4,6.5,7.8,8.4c1.4,1,4.2,2.3,7.2,3.6c0.7,0.3,2.1,0.9,2.1,0.9l5.6,5.6     c0.5,0.5,1.2,0.5,1.6,0l12.5-12.5C97.6,65.4,97.6,64.7,97.2,64.2z"></path></g></g></g></svg></button>
+<button onclick="MainBtnClick(1)" id="buddybtn" class="btn tooltip2"><span class="tooltiptext2">Client Forms</span>
+<svg height='100px' width='100px'  fill="#000000" class="bigbimage" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><path d="M55.9,51.8l12.9-12.9V87c0,2.2-1.8,4-4,4h-48c-2.2,0-4-1.8-4-4V13c0-2.2,1.8-4,4-4h48c2.2,0,4,1.8,4,4v6.1L46,41.9  c-0.2,0.2-0.4,0.5-0.5,0.8L42,53.3c-0.2,0.7,0,1.5,0.5,2c0.4,0.4,0.9,0.6,1.4,0.6c0.2,0,0.4,0,0.6-0.1l10.6-3.5  C55.4,52.2,55.7,52,55.9,51.8z M86.3,11.5c-1.1-1.1-3.1-1.1-4.2,0L80,13.6l4.2,4.2l2.1-2.1c0.6-0.6,0.9-1.3,0.9-2.1  C87.2,12.8,86.9,12.1,86.3,11.5z M49.2,44.4L47,50.8l6.4-2.1l28-28l-4.2-4.2L49.2,44.4z"></path></svg></button>
+<a onclick="MainBtnClick(0)"><img src="Resources/Images/Battle-Buddies-1-e1594920626938.png"></a>
+<button onclick="MainBtnClick(2)" id="careerbtn" class="btn tooltip2">
+<svg height='100px' width='100px'  fill="#000000" class="bigbimage" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0px" y="0px" viewBox="0 0 100 100" style="enable-background:new 0 0 100 100;" xml:space="preserve"><style type="text/css">
+	.st0{fill:#000000;}
+	.st1{fill:#000000;}
+	.st2{fill:#000000;}
+</style><g><g><g><path class="st1" d="M53.2,74.1c0,0.1,0,0.1-0.1,0.2c0,0.1,0,0.1-0.1,0.2L53,74.5L46,87c-0.3,0.6-1.1,0.8-1.7,0.5l-4.7-2.9     c-0.6-0.4-0.8-1.2-0.4-1.8l4.2-7.4l2.8-14l8.5,5.7L53.2,74.1C53.2,74,53.2,74,53.2,74.1z"></path><path class="st1" d="M53.2,22.9c-1.9-1.4-3.1-3.6-3.1-6.1c0-4.2,3.4-7.5,7.5-7.5c4.2,0,7.5,3.4,7.5,7.5c0,3.4-2.2,6.3-5.3,7.2     c-0.7,0.2-1.4,0.3-2.2,0.3C56,24.4,54.5,23.8,53.2,22.9z"></path><path class="st1" d="M68,84.4c-0.2,0.7-0.8,1.1-1.5,1l-5.3-1.3c-0.7-0.2-1.1-0.8-0.9-1.5l3.1-14L43,55c-0.3-0.4-0.4-1-0.1-1.5     c0-0.1,0-0.3,0-0.4l2.7-17.5l-8.5,4.2l-3.2,9.4c-0.2,0.7-0.9,1-1.6,0.8l-3.7-1.3c-0.7-0.2-1-0.9-0.8-1.6l4.6-13.4     c0.1-0.4,0.4-0.7,0.8-0.8c0.1-0.1,0.2-0.1,0.2-0.2l14.2-6.9c0.1-0.1,0.3-0.1,0.4-0.1h0.1h0.2c0,0,0.1,0,0.1,0l3.7,0.6     c0,0,0.1,0.1,0.1,0.1l4.5,4.9c0.4,0.3,1,0.1,1.2-0.3l1-3.7l4.1,0.6c0.1,0,0.2,0.1,0.3,0.1c0.2,0.1,0.3,0.2,0.5,0.3l9.9,9.9     c0,0,0.1,0.1,0.1,0.1h7.1c0.7,0,1.3,0.6,1.3,1.3v3.4c0,0.7-0.6,1.3-1.3,1.3H69c-0.4,0-0.8-0.2-1-0.5L62.2,38l-3.4,15.6l13.3,8.9     c0.5,0.3,0.7,1,0.5,1.6L68,84.4z"></path><path class="st1" d="M34.6,52.5c0.2,0.1,0.4,0.3,0.3,0.6l-0.8,2.2c-0.1,0.2-0.3,0.4-0.6,0.3l-9.3-3.4c-0.2-0.1-0.4-0.3-0.3-0.6     l0.8-2.2c0.1-0.2,0.3-0.4,0.6-0.3l2.6,1l3.7,1.4L34.6,52.5z"></path><path class="st1" d="M53,74.4c0-0.1,0.1-0.1,0.1-0.2c0,0.1-0.1,0.2-0.2,0.3L53,74.4z"></path><path class="st1" d="M48.2,25.6C48.2,25.6,48.2,25.6,48.2,25.6l-0.2,0C48.1,25.6,48.1,25.6,48.2,25.6z"></path><path class="st2" d="M46.9,57.7l-3.6-2.4c-0.1-0.1-0.2-0.1-0.2-0.2L46.9,57.7z"></path><path class="st1" d="M40.9,59.9c0.5,0.3,0.8,0.9,0.6,1.5l-4.8,13.2c-0.2,0.7-1,1-1.6,0.8l-24.5-8.9c-0.7-0.2-1-1-0.8-1.6     l4.8-13.2c0.2-0.7,1-1,1.6-0.8l7.5,2.7l17,6.2C40.8,59.8,40.8,59.9,40.9,59.9z"></path></g></g></g></svg>
+<span class="tooltiptext2">Careers</span></button>
+<button onclick="MainBtnClick(3)" id="infobtn" class="btn tooltip2">
+<svg height='100px' width='100px'  fill="#000000" class="bigbimage" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 100" x="0px" y="0px"><title>Artboard 10</title><path d="M12.09,97.36a1.06,1.06,0,0,0,1,.63H69a1.06,1.06,0,0,0,1-.63l7.29-16.52a5.65,5.65,0,0,0,.32-3.64L72.13,55a19.54,19.54,0,0,0-4.32-8.35,18.41,18.41,0,0,0-2.33-2.21A89.66,89.66,0,0,0,55.3,37.59,20.2,20.2,0,0,0,51.92,36a.55.55,0,0,0-.72.42L46,64.58a.29.29,0,0,1-.58,0L42.83,44.9l2-3.15L42.55,38.9a.57.57,0,0,1,.18-.86l7.12-3.8V30.29a11.69,11.69,0,0,0,1.42-3.9c.57,0,1.33-.85,2.14-3.71,1.11-3.92-.07-4.5-1.07-4.41a10.36,10.36,0,0,0,.43-1.61C54.46,6.51,49.46,6.15,49.46,6.15a7.68,7.68,0,0,0-3-2.8A10.15,10.15,0,0,0,40.27,2a9,9,0,0,0-2.46.47h0A10.86,10.86,0,0,0,35.1,3.91a14.5,14.5,0,0,0-2.79,2.3,11.23,11.23,0,0,0-3,5.28,11.47,11.47,0,0,0,0,5.16h0a10.26,10.26,0,0,0,.43,1.61c-1-.09-2.18.49-1.07,4.41.81,2.86,1.56,3.67,2.14,3.71a12,12,0,0,0,1.42,3.94v3.9L39.36,38a.57.57,0,0,1,.18.86L37.3,41.75l2,3.15L36.62,64.56a.29.29,0,0,1-.58,0L30.89,36.44a.55.55,0,0,0-.72-.42,20.16,20.16,0,0,0-3.38,1.57A89.62,89.62,0,0,0,16.6,44.46a18.41,18.41,0,0,0-2.33,2.22A19.53,19.53,0,0,0,10,55L4.48,77.2a5.65,5.65,0,0,0,.32,3.64ZM66.5,79.15,63.35,91l-.28-22.67ZM19,68.31,18.74,91,15.58,79.15ZM64.7,2a4.83,4.83,0,0,0-4.83,4.83V26.55a4.83,4.83,0,0,0,4.83,4.83h4.91V37a1,1,0,0,0,1.67.69l6.23-6.23,0,0H90.86a4.83,4.83,0,0,0,4.83-4.83V6.84A4.83,4.83,0,0,0,90.86,2ZM80.55,16,79,21.74a.59.59,0,0,0,.57.74.59.59,0,0,1,.59.59v1.18a.59.59,0,0,1-.59.59H76.36a1.58,1.58,0,0,1-1.53-2l1.5-5.79a.59.59,0,0,0-.57-.74.59.59,0,0,1-.59-.59V14.57a.59.59,0,0,1,.59-.59H79A1.58,1.58,0,0,1,80.55,16Zm-.42-3.63a2.22,2.22,0,1,1,0-3.14A2.22,2.22,0,0,1,80.12,12.33Z"></path></svg><span class="tooltiptext2">About</span></button>
+</div>
+
+<!-- Content Partitions -->
+
+<div class="row">
+<div class="col-2 bigscreen">
+<div name="leftframe" id="leftframe" style="width:80%;min-height:90vh;float:right;border:hidden;"></div>
+</div>
+
+<div class="col-8">
+<div class="smallscreen">
+<div name="mainframe" id="centerframe" style="width:100%;min-height:150vh;border:hidden;margin:auto;">
+</div></div>
+
+</div>
+
+<div class="col-2 bigscreen">
+<div name="rightframe" id="rightframe" style="width:80%;min-height:90vh;float:left;border:hidden;"></div>
+</div>
+</div>
+
+<!-- Bottom Copyright -->
+
+<div style="position:fixed;bottom:0;height:20px;width:100%;background-color:#ffeeff;text-align:center;padding:2px;">
+<p style="margin:0;padding:0;z-index:2;">&#169;2020 Battle Buddies Homehealth Care, LLC Bizworks</p>
+</div>
+</body>
+</html>
+<script src="JS/BBMain.js"></script>

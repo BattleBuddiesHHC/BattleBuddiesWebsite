@@ -1,0 +1,101 @@
+<div id="drops">
+<div class="dropdown">
+  <button class="dropbtn">Menu</button>
+  <div class="dropdown-content">
+    <a onclick="openCareer(event, 'Caregiver')">Caregiver Description</a>
+    <a onclick="openCareer(event, 'OA')">Office Assistant Description</a>
+    <a onclick="openCareer(event, 'OM')">Office Manager Description</a>
+	<a onclick="openCareer(event, 'Apply')">Apply</a>
+  </div>
+</div>
+</div>
+
+<div class="fade-in" style="text-align:center;">
+<div class="socialback" style="width:70%;min-height:1000px;">
+<script>
+function openCareer(evt, careerName) {
+  document.getElementById("opener").style.display = "none";
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("jobpick");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  
+  document.getElementById(careerName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<div id="opener">
+<h1>Wanna Work for Battle Buddies Home Healthcare?</h1>
+<p>We here try our best to make a smooth mix between our clients and our employees. If it wasn't for our employees our clients would not be able to operate on the day to day. Most of our clients just need a little help to keep things going. With that we are always looking for people with this in mind. If you think you can perform the job duties and will be able to keep another persons welfare in mind when you're working.</p>
+</div>
+
+<div id="jobdesc">
+
+<!-- Tab content -->
+<div id="Apply" class="tabcontent">
+<br>
+  <h3><b>Fill in Form to Apply</b></h3>
+  <br>
+  <label for="name"><b>Full Name:</b></label><br>
+  <input id="name" type="text" placeholder="Enter Name" name="name" required><br><br>
+  <label for="phone"><b>Phone Number:</b></label><br>
+  <input id="phone" type="text" placeholder="Enter Phone Number" name="phone" required><br><br>
+  <label for="phone"><b>Email:</b></label><br>
+  <input id="email" type="text" placeholder="Enter Email" name="email" required><br><br><br>
+  <select name="positions" id="positions">
+  <option value="Caregiver">Caregiver</option>
+  <option value="Office Assistant">Office Assistant</option>
+  <option value="Office Manager">Office Manager</option>
+  </select><br><br>
+  <span id="lgnerr"></span>
+  <p style="margin:auto;font-size:10px;width:300px;word-wrap:break-word;">*Note this form will open up your email client if you have any protections it may not open up. Email battlebuddiesoa@outlook.com with the above information and any supporting documents if it does not. Good luck!*</p><br>
+  <button onClick="sendEmailJob()">Send</button>
+</div>
+
+<div id="Caregiver" class="tabcontent">
+<br>
+  <h3><b>Caregiver</b></h3>
+  <br>
+  <p>Here at Battle Buddies our frontline workers are our caregivers. If you have a passion to help someone whom just needs a little extra help with their day to day
+  then this is the job for you.<br><br><div style="width:50%;margin-left:auto;margin-right:auto;text-align:left;"><b>Job duties:</b><hr><br>-Work with clients and help them with their needs<br><br>-Possible light cleaning including sweeping, mopping, dusting, scrubbing, dishes
+  <br><br>-We sometimes transport our clients<br><br>-Cooking for our clients<br><br>-Our job duties mostly surround helping our clients with their day to day needs and most of the functions of this job surround that<br><br>-Within availability
+  if a client needs something or other caregiver has a situation out of their hands you may be called to fill in the shift<br><br><br><b>What we're looking for:</b><hr><br>-Someone whom is reliable<br><br>-Someone willing to work with people<br>
+  <br>-Someone with good communication<br><br>-Someone with an air of professionalism about them<br><br><br><b>Pay:</b><hr><br>10-12$/hour
+  </p></div>
+</div>
+
+<div id="OA" class="tabcontent">
+<br>
+  <h3><b>Office Assistant</b></h3>
+  <br>
+  <p>The office assistant is the office managers right hand, always there to assist with any phone calls or employee relations as they come up.
+  Also responsible for making sure all the filing and organizational tasks are done in proper order. If you have a knack for organization and are a natural problem
+  solver this job will be the fit for you<br><br><div style="width:50%;margin-left:auto;margin-right:auto;text-align:left;"><b>Job duties:</b><hr><br>-Work with the office manager to insure our caregivers get the support they need<br><br>-Social media management, following set plans for marketing the company<br><br>-Facilitating our employee and client newsletter<br><br>-Answering phone and responding to issues
+  whether they're from an employee or a client<br><br>-Helping with any technology issues that come up<br><br>-Organizing files and data<br><br>-Interviewing support<br><br>-New hire paperwork filing
+  <br><br><br><b>What we're looking for</b><hr><br>-Organizational skills<br><br>-Communication skills<br><br>-Some idea of basic marketing techniques<br><br>-Experience using Microsoft Office Products(Excel,Office,Publisher)
+  <br><br><br><b>Helpful but not required:</b><hr><br>-Image Editing (Gimp,Krita)<br><br>-Soft experience with HTML,CSS,Javascript and PHP<br><br><br><b>Pay:</b><hr><br>12$/hour</div></p>
+</div>
+
+<div id="OM" class="tabcontent">
+<br>
+  <h3><b>Office Manager</b></h3>
+  <br>
+  <p>Battle Buddies has always had its finest working as the office manager, this position is the most critical to successful
+  operations. The office manager is responsible for keeping the schedule, clients and employees all on an organized path to sustainability
+  Our least likely job to be open and our most demanding
+  <br><br><div style="width:50%;margin-left:auto;margin-right:auto;text-align:left;"><b>Job duties:</b><hr><br>-Organize weekly schedule for clients and caregivers<br><br>-Handle issues regarding caregivers and clients<br><br>-Fill out invoices for clients<br><br>-Answering phone and responding to issues
+  <br><br>-Creating and following marketing plan<br><br>-Organizing files and data<br><br>-Interviewing and hiring<br><br>-Filing and audit protection
+  <br><br><br><b>What we're looking for</b><hr><br>-Organizational skills<br><br>-Communication skills<br><br>-Some idea of basic marketing techniques<br><br>-Experience using Microsoft Office Products(Excel,Office,Publisher)<br><br>-Ability to juggle many responsibilities at once<br><br>-Problem solver
+  <br><br><br><b>Pay:</b><hr><br>14$/hour</div></p>
+</div>
+</div>
+</div>
+</div>

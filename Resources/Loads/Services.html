@@ -1,0 +1,43 @@
+<script>
+function dropdownchange(e){
+	if (e == 0) {
+        document.getElementById("servicemain").innerHTML = "<div class=\"fade-in\"><h2><b>We do our best so you can do yours<b></h2><br><img style=\"width:70%;border-radius:1rem;\" src=\"Resources/Images/Services/elderly-care-1024x683.png\"></div>";
+    }else if(e == 1){
+		document.getElementById("servicemain").innerHTML = "<div class=\"fade-in\"><h2>Companionship</h2><br><img style=\"width:50%;border-radius:1rem;\" src=\"Resources/Images/Services/Companionship.jpg\"><br><br><p style=\"text-align:left;width:50%;margin-left:auto;margin-right:auto;\">Companionship,	Being there for one another is one of the most essential needs of the human race. Battle Buddies understands this. This is why every caregiverstrives to be there for you. We try our best to make sure our clients and caregivers work together in harmony. Many of our patrons enjoy holding conversations with our caregivers, watching tv, or taking walks. We try out best to make sure our caregivers and clients work in harmony. Many of our patrons love the fact their caregivers can listen to them and chat if they want to as well as be there to watch a movie or even enjoy an episode on tv. Creating this sense of friendship and companionship is key.</p></div>";
+	}else if(e == 2){
+		document.getElementById("servicemain").innerHTML = "<div class=\"fade-in\"><h2>House Maintenance</h2><br><img style=\"width:50%;border-radius:1rem;\" src=\"Resources/Images/Services/Cleaning-Services-BBHHC-1024x686.png\"><br><br><p style=\"text-align:left;width:50%;margin-left:auto;margin-right:auto;\">Our caregivers also help with light house maintenance. We as a company do not deep clean a patrons residence and we do not supply the cleaning materials so all jobs do require our patrons provide the cleaning supplies of their choice and to double check the areas after our caregivers have cleaned them so if there is anything that is missed they will be able to get it cleaned right away. We like to make sure that if you have a little bit of an issue getting those basic things done, we can be there to support and assist. We have found that our caregivers and patrons rely on each other to make sure the residence is maintained, and the caregiver can keep an eye out on those issues for the next time.</p></div>";
+	}else if(e == 3){
+		document.getElementById("servicemain").innerHTML = "<div class=\"fade-in\"><h2>Meal Preparation</h2><br><img style=\"width:50%;border-radius:1rem;\" src=\"Resources/Images/Services/MealPrep.jpg\"><br><br><p style=\"text-align:left;width:50%;margin-left:auto;margin-right:auto;\">Eating is a vital part of the human routine and with that our caregivers are there to help you out with meal prepping so you or your loved one can know they will have a meal easily ready for them when they need it. Our caregivers can prepare meals for up to 3 days away to make sure our patrons are secure and can have meals for days we may not be able to see them for. We can help make some nutritious and delectable meals for what you need. Some of our caregivers may help you discover that hidden tastebud you never knew you had. Each of our caregivers have their own specialties when it comes to cooking so our patrons can both be apart of the meal planning process and can also allow each caregiver to bring something new to the table.</p></div>";
+	}else if(e == 4){
+		document.getElementById("servicemain").innerHTML = "<div class=\"fade-in\"><h2>Hygiene</h2><br><img style=\"width:50%;border-radius:1rem;\" src=\"Resources/Images/Services/Hygiene.jpg\"><br><br><p style=\"text-align:left;width:50%;margin-left:auto;margin-right:auto;\">Sometimes there is a need in which you may need a little help to keep yourself smelling like daisies and we understand that. Our Caregivers can give you that \"Leg up\" you may need to stay clean and ready for the day. Some people just need a little help getting that shirt on or lifting their leg to get into the shower and we can help you with that. We do not help the person bathe we are a support system for making sure our patrons can get themselves ready and moving onto the day. Our caregivers help make the necessary hygiene routines much more efficient.</p></div>";
+	}else if(e == 5){
+		document.getElementById("servicemain").innerHTML = "<div class=\"fade-in\"><h2>Transportation</h2><br><img style=\"width:50%;border-radius:1rem;\" src=\"Resources/Images/Services/Transportation.jpg\"><br><br><p style=\"text-align:left;width:50%;margin-left:auto;margin-right:auto;\">When you cannot get to the grocery store its hard, we understand that which is why our Caregivers are able to help you make sure your get what you need from around town. Trips including grocery stores, the bank and pharmacy runs to make sure you are getting what you need when you need it. If you do not want to go to the store our caregivers can also run and get you what you need and bring it back. We are always trying to make sure our clients get what they need when they need it. Planning the needs is always a forethought we at Battle Buddies Home Healthcare preserve.</p></div>";
+	}else if(e == 6){
+		document.getElementById("servicemain").innerHTML = "<div class=\"fade-in\"><h2>Miscellaneous</h2><br><img style=\"width:50%;border-radius:1rem;\" src=\"Resources/Images/Services/Misc.jpg\"><br><br><p style=\"text-align:center;width:50%;margin-left:auto;margin-right:auto;\">There are times that things may not go to plan and thats alright. If you have any questions about the services our caregivers provide call our office at (269)716-2964 for more information<br><br>We hope to see you soon!</p></div>";
+	}
+	descchange(e);
+}
+</script>
+<div id="drops">
+<div class="dropdown">
+  <button class="dropbtn">Services</button>
+  <div class="dropdown-content">
+    <a onclick="dropdownchange(1)">Companionship</a>
+    <a onclick="dropdownchange(2)">House Maintenance</a>
+    <a onclick="dropdownchange(3)">Meal Preparation</a>
+	<a onclick="dropdownchange(4)">Hygiene</a>
+	<a onclick="dropdownchange(5)">Transportation</a>
+	<a onclick="dropdownchange(6)">Miscellaneous</a>
+  </div>
+</div>
+</div>
+<br><br>
+<div class="fade-in" style="text-align:center;">
+<div id="servicemain" style="text-align:center;">
+<h2><b>We do our best so you can do yours!<b></h2>
+<br>
+<img style="width:70%;border-radius:1rem;" src="Resources/Images/Services/elderly-care-1024x683.png">
+<br><br>
+<p>Click a service on the left side<br>to see what is included</p>
+</div>
+</div>

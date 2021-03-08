@@ -1,0 +1,101 @@
+<div id="drops">
+<div class="dropdown">
+  <button class="dropbtn">Forms</button>
+  <div id="dropdownadd" class="dropdown-content">
+    <a onclick="openCareer(event, 'Complaint')">Complaint</a>
+    <a onclick="openCareer(event, 'ClientSchedule')">Schedule Change</a>
+    <a onclick="openCareer(event, 'Employee')">Employee Forms</a>
+  </div>
+</div>
+</div>
+
+<div class="fade-in" style="text-align:center;">
+<div class="socialback" style="width:70%;min-height:1000px;">
+<script>
+function openCareer(evt, careerName) {
+  document.getElementById("opener").style.display = "none";
+  var i, tabcontent, tablinks;
+
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+
+  tablinks = document.getElementsByClassName("formpick");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  
+  document.getElementById(careerName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+
+<div id="opener">
+<h1>Public Forms</h1>
+<p>Here you will find our public forms for caregivers and our clients. Click on a form to view it, type into it and download it. If you have any errors either download an accompanying file, fill it out and email it to battlebuddieshhc@outlook.com or type in the information asked with the forms here.</p>
+</div>
+
+<div id="jobdesc">
+<!-- Tab content -->
+
+<div id="Incident" class="tabcontent">
+<h2>Incident Report</h2>
+<embed src="Resources/PDF/Incident Report.pdf" width="100%"height="800px" />
+</div>
+
+<div id="DailyCare" class="tabcontent">
+<h2>Dailycare Form</h2>
+<embed src="Resources/PDF/Daily Care Record.pdf" width="100%" height="600px" />
+</div>
+
+<div id="Communication" class="tabcontent">
+<h2>Communication Report</h2>
+<embed src="Resources/PDF/Communication Sheet.pdf" width="100%" height="800px" />
+</div>
+
+<div id="Financial" class="tabcontent">
+<h2>Financial Form</h2>
+<embed src="Resources/PDF/Financial Receipts Record.pdf" width="100%" height="800px" />
+</div>
+
+<div id="Complaint" class="tabcontent">
+<h2>If you have a complaint fill the form below:</h2>
+  <br>
+  <label for="name"><b>Full Name:</b></label><br>
+  <input id="name" type="text" placeholder="Enter Name" name="name" required><br><br>
+  <label for="phone"><b>Phone Number:</b></label><br>
+  <input id="phone" type="text" placeholder="Enter Phone Number" name="phone" required><br><br>
+  <label for="message"><b>Enter your Complaint:</b></label><br>
+  <textarea id="message" type="text" placeholder="Enter Complaint" name="complaint" cols="40" rows="5" required></textarea><br><br><br>
+  <span id="lgnerr"></span>
+  <button onClick="sendEmailComplaint()">Send</button>
+</div>
+
+<div id="ClientSchedule" class="tabcontent">
+<h2>If you have a need to change your schedule enter it below:</h2>
+  <br>
+  <label for="name"><b>Full Name:</b></label><br>
+  <input id="name" type="text" placeholder="Enter Name" name="name" required><br><br>
+  <label for="phone"><b>Phone Number:</b></label><br>
+  <input id="phone" type="text" placeholder="Enter Phone Number" name="phone" required><br><br>
+  <label for="phone"><b>Schedule Change Request:</b></label><br>
+  <textarea id="message" type="text" placeholder="Enter Schedule Change Needs" name="message" cols="40" rows="5" required></textarea><br><br><br>
+  <span id="lgnerr"></span>
+  <button onClick="sendEmailScheduleChange()">Send</button>
+</div>
+
+<div id="Employee" class="tabcontent">
+<h2>Employee Login</h2>
+<label for="uname"><b>Username</b></label><br>
+<input id="uname" type="text" placeholder="Enter Username" name="uname" required><br><br>
+<label for="psw"><b>Password</b></label><br>
+<input id="psswd" type="password" placeholder="Enter Password" name="psw" required><br><br><br>
+<span id="lgnerr"></span>
+<button onclick="Login()">Login</button>
+</div>
+
+</div>
+
+</div>
+</div>

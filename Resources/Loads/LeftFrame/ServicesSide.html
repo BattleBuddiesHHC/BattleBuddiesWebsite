@@ -1,0 +1,25 @@
+<script>
+var currentbutton = 0;
+function stylechange(btn){
+	var buttonpressed = document.getElementById(btn);
+	buttonpressed.classList.remove("active");
+	buttonpressed.classList.add("active");
+	if(currentbutton == 0){
+	currentbutton = btn;
+	}else{
+	document.getElementById(currentbutton).classList.remove("active");
+	document.getElementById(currentbutton).classList.add("active");
+	}
+}
+</script>
+
+<div style="text-align:center;" class="socialback fade-in">
+<h4>Services:</h4>
+<br>
+<button id="1" class="btn btn-secondary" onclick="dropdownchange(1)">Companionship</button><br><br>
+<button id="2" class="btn btn-secondary" onclick="dropdownchange(2)">House Maintenance</button><br><br>
+<button id="3" class="btn btn-secondary" onclick="dropdownchange(3)">Meal Preparation</button><br><br>
+<button id="4" class="btn btn-secondary" onclick="dropdownchange(4)">Hygiene</button><br><br>
+<button id="5" class="btn btn-secondary" onclick="dropdownchange(5)">Transportation</button><br><br>
+<button id="6" class="btn btn-secondary" onclick="dropdownchange(6)">Miscellaneous</button>
+</div>
