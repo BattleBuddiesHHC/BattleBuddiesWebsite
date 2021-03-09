@@ -82,6 +82,7 @@
 }
 
 html {
+  min-height: 100vh;
   font-family: calibri;
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
