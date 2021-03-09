@@ -123,6 +123,7 @@ img {
 body{
 	padding:0;
 	margin:0;
+	background-image: linear-gradient(to right, rgba(255,0,0,0), var(--primary));
 }
 
 button:focus{
